@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cooking tips and tricks to make your time in the kitchen easier and more efficient.">
-    <title>Contact - Simple Recipes </title>
+    <title>Contact - Simple Recipes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body> 
+<body>
     <header>
-        <!-- Logo container -->
         <div class="logo">
-            <i class="logo-icon"></i> <!-- Placeholder for Logo Icon or Image -->
-            <h1>Simple Recipes</h1> <!-- Website Name -->
+            <i class="logo-icon"></i>
+            <h1>Simple Recipes</h1>
         </div>
-
-        <!-- Nav container -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -29,7 +26,24 @@
         </nav>
     </header>
 
-     <!-- Contact form -->
-    <form></form>
+    <section class="contact-form-section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, feel free to reach out to us!</p>
+
+        <!-- Contact Form -->
+        <form action="submit_form.php" method="POST" class="contact-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Example: 'Hi, I tried your avocado toast recipe, and it was amazing! I was wondering if you have any suggestions for adding more protein to the toast. I’ve seen some people add poached eggs or smoked salmon. What do you recommend for a vegetarian version? Thanks!'" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
 </body>
+</html>
