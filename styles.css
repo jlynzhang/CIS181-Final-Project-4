@@ -319,6 +319,41 @@ footer .social-icons a:hover {
     color: #FF6B81; /* Bold Watermelon Pink for social media hover effect */
 }
 
+/* Wrapper for page content */
+.page-wrapper {
+    position: relative;
+    min-height: 100vh; /* Ensures the page fills at least the screen height */
+}
+
+/* Page content */
+.page-content {
+    padding-bottom: 60px; /* Leave room at the bottom for the spinner */
+}
+
+/* Loading spinner */
+.loading-indicator {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #FF9F1C; /* Bold Mango Orange */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0; /* Stick to the bottom of the screen */
+    left: 50%;
+    transform: translateX(-50%); /* Center the spinner horizontally */
+    animation: spin 1s linear infinite; /* Continuously spinning */
+}
+
+/* Spinner animation */
+@keyframes spin {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
 /* Video Container Styling */
 .video-container {
     position: relative;
