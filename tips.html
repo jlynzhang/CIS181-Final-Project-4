@@ -20,14 +20,14 @@
 
       <!-- Nav container -->
         <nav>
-            <ul>
+            <ol>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="breakfast.html">Breakfast</a></li>
                 <li><a href="lunch.html">Lunch</a></li>
                 <li><a href="dinner.html">Dinner</a></li>
                 <li><a href="tips.html">Tips & Tricks</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ol>
         </nav>
     </header>
 
@@ -51,28 +51,58 @@
                 <li><strong>Let meat rest:</strong> Resting meat after cooking locks in juices and enhances flavor.</li>
             </ul>
         </section>
-    
-        <!-- Section 2: Ingredient Substitutions -->
-        <section>
-            <h3>Easy Ingredient Substitutions</h3>
-            <p>Ran out of an ingredient? Here are some quick and easy swaps you can use:</p>
-            <ul>
-                <li><strong>No Butter?</strong> Use an equal amount of coconut oil or olive oil.</li>
-                <li><strong>No Buttermilk?</strong> Mix 1 cup of milk with 1 tablespoon of vinegar or lemon juice.</li>
-                <li><strong>No Eggs?</strong> Use 1/4 cup unsweetened applesauce or mashed banana as a replacement in baking.</li>
-                <li><strong>No Heavy Cream?</strong> Combine 3/4 cup milk with 1/4 cup melted butter.</li>
-                <li><strong>No Breadcrumbs?</strong> Crushed crackers, oats, or even cornflakes work as excellent substitutes.</li>
-            </ul>
-        </section>
-    
+
+     <!-- Section 2: Ingredient Substitutions -->
+<section>
+    <h3>Easy Ingredient Substitutions</h3>
+    <p>Ran out of an ingredient? Here are some quick and easy swaps you can use:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Ingredient</th>
+                <th>Substitute</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>No Butter?</strong></td>
+                <td>Use an equal amount of coconut oil or olive oil.</td>
+            </tr>
+            <tr>
+                <td><strong>No Buttermilk?</strong></td>
+                <td>Mix 1 cup of milk with 1 tablespoon of vinegar or lemon juice.</td>
+            </tr>
+            <tr>
+                <td><strong>No Eggs?</strong></td>
+                <td>Use 1/4 cup unsweetened applesauce or mashed banana as a replacement in baking.</td>
+            </tr>
+            <tr>
+                <td><strong>No Heavy Cream?</strong></td>
+                <td>Combine 3/4 cup milk with 1/4 cup melted butter.</td>
+            </tr>
+            <tr>
+                <td><strong>No Breadcrumbs?</strong></td>
+                <td>Crushed crackers, oats, or even cornflakes work as excellent substitutes.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
         <!-- Section 3: Food Storage & Leftover Hacks -->
         <section>
             <h3>Food Storage & Leftover Hacks</h3>
-            <p>Maximize the shelf life of your ingredients and make the most out of your leftovers. Watch the video below for practical storage tips:</p>
+            <p>Maximize the shelf life of your ingredients and make the most out of your leftovers. Watch the videos below for practical storage tips:</p>
             
             <!-- Add Embedded Kitchen Video -->
+             <div class="video-container-wrapper">
+                <button class="arrow left-arrow" aria-label="Scroll left">&lt;</button>
              <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3uLKvVe-JHM" title="Kitchen Video" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3uLKvVe-JHM" title="Kitchen Video" frameborder="0" allowfullscreen></iframe> 
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://youtube.com/embed/EOJNZjUjMGA?si=Zj_sruqXIHmvjiP_" title="Leftover Storage Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <button class="arrow right-arrow" aria-label="Scroll right">&gt;</button>
              </div>
             
             <!-- Quick Tips List -->
@@ -99,7 +129,27 @@
         </ul>
     </section>
 </div>
-<div class="loading-indicator"></div>
-</main>    
+<div class="page-with-spinner">
+    <div class="loading-indicator"></div>
+    </div>
+</main>
+<footer> 
+    <div class="social-section">
+        <h5>Stay Updated With Our Latest Recipes</h5>
+        <ul class="social-icons">
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+    </div>
+    <div class="favorite-recipes">
+        <h5>Check Out Our Favorite Recipes:</h5>
+        <ul>
+            <li><a href="https://www.allrecipes.com" target="_blank">AllRecipes</a></li>
+            <li><a href="https://www.foodnetwork.com" target="_blank">Food Network</a></li>
+            <li><a href="https://www.epicurious.com" target="_blank">Epicurious</a></li>
+        </ul>
+    </div>
+    <p>&copy; 2024 Bite Bliss | CIS 181 Final Project</p>
+</footer>    
 </body>
 </html>

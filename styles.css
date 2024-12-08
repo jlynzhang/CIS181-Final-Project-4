@@ -39,8 +39,9 @@ header .logo h1 {
 }
 
 /* Navigation Styling */
+
 nav ul {
-    list-style: none;
+    list-style: none; /* Remove the default bullet points */
     padding: 0;
     margin: 10px 0;
     display: flex;
@@ -64,6 +65,36 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    background-color: #FF9F1C; /* Bold Mango Orange on hover */
+    color: #fff;
+    text-decoration: underline;
+}
+
+nav ol {
+    list-style: none; /* Remove the default numbering */
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ol li {
+    display: inline-block;
+}
+
+nav ol li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    border-radius: 6px;
+    background-color: #D6A8D4; /* Pastel Lavender */
+    transition: all 0.3s ease;
+}
+
+nav ol li a:hover {
     background-color: #FF9F1C; /* Bold Mango Orange on hover */
     color: #fff;
     text-decoration: underline;
@@ -258,14 +289,15 @@ a:hover {
 footer {
     background-color: #AEE6D4; /* Pastel Mint Green for footer */
     color: #fff;
-    padding: 20px;
     text-align: center;
+    overflow: auto;
 }
 
 footer p {
     margin: 0;
     font-size: 1em;
     color: #ccc;
+    padding-bottom: 8px;
 }
 
 footer a {
@@ -275,6 +307,57 @@ footer a {
 
 footer a:hover {
     color: #FF6B81; /* Bold Watermelon Pink on hover */
+
+}
+
+/* Footer Social Section */
+footer .social-section {
+    text-align: center;
+    padding-top: 10px;
+}
+
+footer h5 {
+    margin-bottom: 10px;
+}
+
+footer .social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+footer .social-icons li {
+    display: inline-block;
+}
+
+footer .social-icons a {
+    font-size: 2rem;
+    color: #FF9F1C; /* Bold Mango Orange color for icons */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+footer .social-icons a:hover {
+    color: #FF6B81; /* Bold Watermelon Pink for social media hover effect */
+    transform: scale(1.2); /* Slightly enlarge the icons on hover */
+}
+
+/* Favorite Recipes Section */
+
+footer .favorite-recipes {
+    padding-bottom: 10px;
+}
+
+footer .favorite-recipes ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .favorite-recipes li {
+    margin-bottom: 8px;
 }
 
 /* Button Hover Effects (Extra Fun!) */
@@ -303,22 +386,6 @@ h3 {
     color: #8BC34A; /* Kiwi Green for sub-headings */
 }
 
-footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-footer .social-icons a {
-    color: #fff;
-    font-size: 1.5em;
-    transition: color 0.3s ease;
-}
-
-footer .social-icons a:hover {
-    color: #FF6B81; /* Bold Watermelon Pink for social media hover effect */
-}
-
 /* Wrapper for page content */
 .page-wrapper {
     position: relative;
@@ -328,6 +395,10 @@ footer .social-icons a:hover {
 /* Page content */
 .page-content {
     padding-bottom: 60px; /* Leave room at the bottom for the spinner */
+}
+
+.page-with-spinner .page-content {
+    padding-bottom: 80px; /* Space for spinner */
 }
 
 /* Loading spinner */
@@ -344,6 +415,13 @@ footer .social-icons a:hover {
     animation: spin 1s linear infinite; /* Continuously spinning */
 }
 
+.page-with-spinner .loading-indicator {
+    position: absolute;
+    bottom: 20px; /* Space between spinner and footer */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /* Spinner animation */
 @keyframes spin {
     from {
@@ -354,23 +432,59 @@ footer .social-icons a:hover {
     }
 }
 
-/* Video Container Styling */
-.video-container {
+/* Wrapper for video container and arrows */
+.video-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Space between video and arrows */
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Aspect ratio for 16:9 videos */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000; /* Optional: gives a black background around the video */
+    width: 100%; /* Full width of the section */
+    margin-bottom: 30px; /* Space below the video */
 }
 
+/* Each video container */
+.video-container {
+    position: relative;
+    width: 300px; /* Fixed width for video */
+    height: 170px; /* Adjust height for aspect ratio */
+    overflow: hidden; /* Prevent overflow */
+    background: #000; /* Black background */
+}
+
+.video-container:hover {
+    transform: scale(1.1); /* Scale the video on hover */
+}
+
+/* Embedded iframe styles */
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     border: none;
 }
 
+/* Arrow styles */
+.arrow {
+    color: #FF9F1C;
+    font-size: 2rem; /* Larger font for arrows */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+/* Arrows hover effect */
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+/* Left arrow */
+.arrow.left-arrow {
+    position: absolute;
+    left: 30px; /* Move the left arrow further left */
+}
+
+/* Right arrow */
+.arrow.right-arrow {
+    position: absolute;
+    right: 30px; /* Move the right arrow further right */
+}
